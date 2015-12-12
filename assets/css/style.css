@@ -9,8 +9,8 @@ body {
    position:relative;
 }
 #header {
-   background:#ff0;
-   padding:50px;
+   background: black;
+   padding:20px;
 }
 #body {
    padding:10px;
@@ -34,18 +34,27 @@ header{
 #header ul{
   float: right;
   display:block;
-  
+  padding-right: 100px;
 }
 
 #header li{
   display: inline-block;
   padding-right: 50px;
+  text-transform: uppercase;
+}
+
+#header li a{
+  color: white;
+  text-decoration: none;
 }
 
 .home {
   display: block;
   float: left;
-  padding-left: 50px
+  padding-left: 100px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 h1 {
@@ -80,4 +89,29 @@ p {
 
 #links li{
   display: inline;
+}
+
+
+#header li a:hover {
+  color: red;
+  animation: pulse 1s ease;
+}
+
+#header .home:hover{
+  color: red;
+  animation: pulse 1s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
