@@ -1,0 +1,32 @@
+body{
+}
+h1 {
+  display: block;
+  font-size: 4.6rem;
+  color: black;
+  text-align: center;
+}
+header{
+  display: block;
+  height:100px;
+}
+body p {
+  padding-left: 15%; 
+  padding-right: 15%;, 
+  display: block;
+  font-size: 1.2rem;
+  vertical-align: baseline;
+}
+
+ul{
+  float: right;
+  display:block;
+}
+li{
+  display: inline-block;
+}
+
+#name{
+  color:blue;
+  float: left;
+}
