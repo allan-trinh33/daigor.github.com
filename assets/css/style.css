@@ -27,8 +27,8 @@ header{
   padding: 50px 50px;
 
   position: absolute;
- /* width: 1000px;*/
- /* min-height: 100%;*/
+  width: 1000px;
+  min-height: 100%;
   background-color: white;
   margin-bottom: 25%;
   margin-right: 20%;
