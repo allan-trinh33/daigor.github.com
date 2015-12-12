@@ -27,7 +27,6 @@ body {
 header{
   margin-right: 15%;
   margin-left: 15%;
-
   display: block;
   height:80px;
 }
@@ -41,28 +40,32 @@ header{
   display: inline-block;
   padding-right: 50px;
   text-transform: uppercase;
+  font-family: sans-serif;
 }
 
 #header li a{
   color: white;
   text-decoration: none;
+ 
 }
 
 .home {
   display: block;
   float: left;
-  padding-left: 100px;
+  padding-left: 155px;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
+  font-family: sans-serif;
 }
 
-h1 {
+#body h1 {
   display: block;
   font-size: 4.6rem;
   color: black;
   text-align: center;
   padding: 20px 20px;
+  font-family: Arial;
 }
 body{
   background-color: #ddd;
@@ -78,9 +81,11 @@ body{
   margin-left: 20%;
 }
 
-p {
+.content p {
+  line-height: 1.8;
   font-size: 1.2rem;
   vertical-align: baseline;
+  font-family: Helvetica;
 }
 
 #links{
