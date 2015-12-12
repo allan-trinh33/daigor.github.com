@@ -34,8 +34,8 @@ header{
   margin-right: 20%;
   margin-left: 20%;
 }
-a{
-  font-size: 20px;
+a {
+  font-size: 1.2rem;
   color: black;
 }
 body p {
@@ -54,8 +54,8 @@ li{
   padding: 5px;
 }
 
-#name{
-
-  color: black;
-  float: left;
+.home {
+  display: block;
+  float:left;
+  margin: 22px 25px;
 }
