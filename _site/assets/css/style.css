@@ -143,9 +143,9 @@ body{
 
   height:200px;
 }
-
 #bloglist li{
   text-align: center;
+  padding: 10px 10px;
 }
 @keyframes pulse {
   0% {
