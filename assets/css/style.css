@@ -10,11 +10,10 @@ body {
 }
 #header {
    background: black;
-   padding:20px;
-   margin-bottom: 40px;
+   padding:30px;
 }
 #body {
-   padding:10px;
+   padding:50px;
    padding-bottom:50px;   /* Height of the footer */
 }
 #footer {
@@ -40,14 +39,14 @@ header{
 #header li{
   display: inline-block;
   text-transform: uppercase;
-  font-family: sans-serif;
   padding-right: 10px;
 }
 
 #header li a{
   color: white;
   text-decoration: none;
- 
+  font-family: sans-serif;
+  font-size: 20px;
 }
 
 .home {
@@ -58,6 +57,7 @@ header{
   text-decoration: none;
   text-transform: uppercase;
   font-family: sans-serif;
+  font-size: 20px;
 }
 
 #body h1 {
@@ -74,12 +74,12 @@ body{
 .content {
   display: block;
   padding: 50px 50px;
-  width: 50%;
+  width: 60%;
   background-color: white;
   margin-top: 10px;
   margin-bottom: 10%;
   margin-right: 10%;
-  margin-left: 21%;
+  margin-left: 16%;
 }
 
 .content h3{
@@ -88,13 +88,18 @@ body{
   padding-bottom: 50px;
   text-align: center;
 }
-
+.content h5{
+  font-family: Arial;
+  padding-bottom: 20px;
+ 
+}
 .content p {
   line-height: 1.8;
   font-size: 1.0rem;
   vertical-align: baseline;
   font-family: Helvetica;
   -webkit-animation-duration: 3s;
+  text-indent: 30px;
 }
 
 #links{
@@ -124,10 +129,10 @@ body{
   border-radius:50% 50% 50% 50%;  
 
 
-  width:110px;
+  width:150px;
 
 
-  height:150px;
+  height:200px;
 }
 
 @keyframes pulse {

@@ -11,6 +11,7 @@ body {
 #header {
    background: black;
    padding:20px;
+   margin-bottom: 40px;
 }
 #body {
    padding:10px;
@@ -33,14 +34,14 @@ header{
 #header ul{
   float: right;
   display:block;
-  padding-right: 100px;
+  padding-right: 200px;
 }
 
 #header li{
   display: inline-block;
-  padding-right: 50px;
   text-transform: uppercase;
   font-family: sans-serif;
+  padding-right: 10px;
 }
 
 #header li a{
@@ -52,7 +53,7 @@ header{
 .home {
   display: block;
   float: left;
-  padding-left: 155px;
+  padding-left: 225px;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
@@ -76,9 +77,16 @@ body{
   width: 50%;
   background-color: white;
   margin-top: 10px;
-  margin-bottom: 25%;
-  margin-right: 20%;
-  margin-left: 20%;
+  margin-bottom: 10%;
+  margin-right: 10%;
+  margin-left: 21%;
+}
+
+.content h3{
+  font-family: Arial;
+  padding: 10px;
+  padding-bottom: 50px;
+  text-align: center;
 }
 
 .content p {
@@ -86,7 +94,7 @@ body{
   font-size: 1.0rem;
   vertical-align: baseline;
   font-family: Helvetica;
-  -webkit-animation-duration: 5s;
+  -webkit-animation-duration: 3s;
 }
 
 #links{
@@ -106,6 +114,20 @@ body{
 #header .home:hover{
   color: red;
   animation: pulse 1s ease;
+}
+#circular {
+  text-align: center;
+  padding-bottom: 20px;
+}
+#circular img{
+
+  border-radius:50% 50% 50% 50%;  
+
+
+  width:110px;
+
+
+  height:150px;
 }
 
 @keyframes pulse {
