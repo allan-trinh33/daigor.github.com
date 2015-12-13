@@ -144,7 +144,7 @@ body{
   height:200px;
 }
 
-#bloglist{
+#bloglist li{
   text-align: center;
 }
 @keyframes pulse {
