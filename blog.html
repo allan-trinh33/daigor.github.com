@@ -4,10 +4,10 @@ title: Blog
 ---
 
 
-<ul>
+<ul id="bloglist">
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url }}">December 13{{ post.title }}</a>
+      <a href="{{ post.url }}">{{ page.date | date: '%B %-d, %Y' }} {{ post.heading }}</a>
     </li>
   {% endfor %}
 </ul>

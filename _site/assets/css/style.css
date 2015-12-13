@@ -144,6 +144,9 @@ body{
   height:200px;
 }
 
+#bloglist{
+  text-align: center;
+}
 @keyframes pulse {
   0% {
     transform: scale(1);
