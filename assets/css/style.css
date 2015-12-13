@@ -60,7 +60,7 @@ header{
   font-size: 20px;
 }
 
-#body h1 {
+.content h1 {
   display: block;
   font-size: 4.6rem;
   color: black;
@@ -124,7 +124,7 @@ body{
   text-align: center;
   padding-bottom: 20px;
 }
-#circular img{
+#circular img {
 
   border-radius:50% 50% 50% 50%;  
 
