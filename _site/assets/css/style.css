@@ -143,10 +143,7 @@ body{
 
   height:200px;
 }
-#bloglist li{
-  text-align: center;
-  padding: 10px 10px;
-}
+
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -159,4 +156,12 @@ body{
   100% {
     transform: scale(1);
   }
+}
+
+#bloglist li{
+  text-align: center;
+  padding: 10px 10px;
+}
+#chessboard{
+  text-align: center;
 }
