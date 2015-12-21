@@ -16,7 +16,7 @@ The N-queens problem is a well known puzzle in the computer science world. The g
 The problem becomes exponentially tougher as the board size increases. At the current time of this post, I believe the world record algorithm is N = 27. Sadly, this post isn't going to be about the world breaking solution, but a different solution using bitwise operators. To explore this method, it would be best to start with binary numbers.
 </p>
 <br>
-<br>
+<br>  
 <p>
 In binary, base-2 world, 0 is “0”, 1 is “1”, and 10 is “2” because 10 = 1 * 21 + 0 * 20, or 2. To represent a base-10 “43”, this would look like 00101011, or 0 * 27 + 0 * 26 + 1 * 25 + 0 * 24 + 1 * 23 + 0 * 22 + 1 * 21 + 1 * 20. Binary numbers can be mapped and look quite similar to rows on a chessboard. The number 16 in binary is "10000". Quite similar to placing a queen down on the left-most column in a row of a 5x5 chessboard.
 </p>
@@ -28,15 +28,18 @@ The first step to solving the N queens problem is mapping out the parameters of 
 <br>
 <br>
 <img id="chessboard" src="/assets/Conflicts.png" height="100" width="600">
-<br>
+<br>  
 <br>
 <p>
-At this point a table similar to one the one I provided above for a 5x5 board to test out how the conflicts look as you place down a queen in every row. There are a few important things to note. 
-
-First, the conflicts are maps for where you can place queens on the next row. If you were to combine all three conflicts "x's" anywhere that doesnt have an x is a safe spot for a queen to be put on the next row.
-
+At this point I would suggest drawing a table similar to one the one I provided above for a 5x5 board for multiple scenarios. There are a few important things to note. 
+</p>
+<p>
+  First, the conflicts are maps for where you can place queens on the next row. If you were to combine all three conflicts "x's" anywhere that doesnt have an x is a safe spot for a queen to be put on the next row.
+</p>
+<p>
 Second, the minor and major diagonal conflicts run in a specific pattern. A major/minor diagonal conflict is determined by where you place the queen combined with the previous rows major/minor diagonal conflict SHIFTED in a specific direction. (Majors shift the x's right and minors shift left).
-
+</p>
+<p>
 Lastly, a full column conflict of all x's can only happen when a queen is placed in every column, resulting in a solved board.
 </p>
 
