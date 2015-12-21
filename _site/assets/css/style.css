@@ -88,8 +88,8 @@ body{
   background-color: white;
   margin-top: 10px;
   margin-bottom: 10%;
-  margin-right: 10%;
-  margin-left: 16%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .content h3{
@@ -163,5 +163,7 @@ body{
   padding: 10px 10px;
 }
 #chessboard{
-  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
