@@ -31,7 +31,8 @@
 <h3>December 13, 2015 - by Allan Trinh</h3>
 <article>
   <img id="chessboard" src="/assets/queenboard.png" height="400" width="400">
-
+<br>
+<br>
 <p>
 The N-queens problem is a well known puzzle in the computer science world. The goal is to find the number of ways you can place N number of queens on a NxN board. The picture above shows a one of ten possible solutions for a 5x5 board.
 </p>
@@ -43,12 +44,31 @@ The problem becomes exponentially tougher as the board size increases. At the cu
 <br>
 <br>
 <p>
-Long story short, I did what any reasonable person would do, I googled it. One of the first solutions I came across was a recursive call to 10 lines of code containing one while loop. At first glance, it didn't look so bad. I figured I could dissect 10 lines of code no problem, boy was I wrong.
+Long story short, I did what any reasonable person would do, I googled it. One of the first solutions I came across was a recursive call to 10 lines of code containing one while loop. At first glance, it didn't look so bad. I figured I could dissect 10 lines of code no problem... boy was I wrong. To explore this problem, it would be best to start with binary numbers.
 </p>
 <br>
 <br>
 <p>
+In binary, base-2 world, 0 is “0”, 1 is “1”, and 10 is “2” because 10 = 1 * 21 + 0 * 20, or 2. To represent a base-10 “43”, this would look like 00101011, or 0 * 27 + 0 * 26 + 1 * 25 + 0 * 24 + 1 * 23 + 0 * 22 + 1 * 21 + 1 * 20. Binary numbers can be mapped and look quite similar to rows on a chessboard. The number 16 in binary is "10000". Quite similar to placing a queen down on the left-most column in a row of a 5x5 chessboard.
 </p>
+<br>
+<br>
+<p>
+The first step to solving the N queens problem is mapping out the parameters of the problem. Each time you place down a queen, there are 4 possible conflicts that can happen before placing the next. A row, column, major, and minor diagonal conflict. The row conflict is automatically accounted for due to most algorithms recursively calling the function on the next row. This leaves the column, major, and minor diagonal conflicts.
+</p>
+<br>
+<br>
+<img id="chessboard" src="/assets/Conflicts.png" height="200" width="500">
+<p>
+At this point a table similar to one the one I provided above for a 5x5 board to test out how the conflicts look as you place down a queen in every row. There are a few important things to note. 
+
+First, the conflicts are maps for where you can place queens on the next row. If you were to combine all three conflicts "x's" anywhere that doesnt have an x is a safe spot for a queen to be put on the next row.
+
+Second, the minor and major diagonal conflicts run in a specific pattern. A major/minor diagonal conflict is determined by where you place the queen combined with the previous rows major/minor diagonal conflict SHIFTED in a specific direction. (Majors shift the x's right and minors shift left).
+
+Lastly, a full column conflict of all x's can only happen when a queen is placed in every column, resulting in a solved board.
+</p>
+
 
 
 </article>
