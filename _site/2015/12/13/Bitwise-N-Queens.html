@@ -55,11 +55,11 @@ The first step to solving the N queens problem is mapping out the parameters of 
 At this point I would suggest drawing a table similar to the one I provided above for a 5x5 board for multiple scenarios. There are a few important things to note: 
 
 <ul id="queens">
-  <li>First, the conflicts are maps for where you can place queens on the next row. The idea is to combine all three conflicts to determine a safe spot to place a queen on the next row.</li>
+  <li>The conflicts are maps for where you can place queens on the next row. The idea is to combine all three conflicts to determine a safe spot to place a queen on the next row.</li>
   
-  <li>Second, the minor and major diagonal conflicts run in a specific pattern. A major/minor diagonal conflict is determined by where you place the queen combined with the previous rows major/minor diagonal conflict SHIFTED in a specific direction. (Majors shift the x's right and minors shift left).</li>
+  <li>The minor and major diagonal conflicts run in a specific pattern. A major/minor diagonal conflict is determined by where you place the queen combined with the previous rows major/minor diagonal conflict SHIFTED in a specific direction. (Majors shift the x's right and minors shift left).</li>
   
-  <li>Lastly, a full column conflict of all x's can only happen when a queen is placed in every column, resulting in a solved board.</li>
+  <li>A full column conflict of all x's can only happen when a queen is placed in every column, resulting in a solved board.</li>
 </ul>
 
 
