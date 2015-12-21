@@ -13,12 +13,7 @@ The N-queens problem is a well known puzzle in the computer science world. The g
 <br>
 <br>
 <p>
-The problem becomes exponentially tougher as the board size increases. At the current time of this post, I believe the world record algorithm is N = 27. Sadly, this post isn't going to be about the world breaking solution, but a different solution using bitwise operators. I'll be honest, I couldn't even imagine a way to solve this problem using bitwise operators, nor did I have enough understanding of binary numbers and operators to even start.
-</p>
-<br>
-<br>
-<p>
-Long story short, I did what any reasonable person would do, I googled it. One of the first solutions I came across was a recursive call to 10 lines of code containing one while loop. At first glance, it didn't look so bad. I figured I could dissect 10 lines of code no problem... boy was I wrong. To explore this problem, it would be best to start with binary numbers.
+The problem becomes exponentially tougher as the board size increases. At the current time of this post, I believe the world record algorithm is N = 27. Sadly, this post isn't going to be about the world breaking solution, but a different solution using bitwise operators. To explore this method, it would be best to start with binary numbers.
 </p>
 <br>
 <br>
@@ -33,6 +28,8 @@ The first step to solving the N queens problem is mapping out the parameters of 
 <br>
 <br>
 <img id="chessboard" src="/assets/Conflicts.png" height="100" width="600">
+<br>
+<br>
 <p>
 At this point a table similar to one the one I provided above for a 5x5 board to test out how the conflicts look as you place down a queen in every row. There are a few important things to note. 
 
