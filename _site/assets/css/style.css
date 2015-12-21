@@ -169,4 +169,10 @@ body{
 }
 #queens{
   list-style: disc;
+  line-height: 1.8;
+  font-size: 1.0rem;
+  vertical-align: baseline;
+  font-family: Helvetica;
+  -webkit-animation-duration: 3s;
+  text-indent: 30px;
 }
