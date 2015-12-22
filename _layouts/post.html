@@ -1,9 +1,12 @@
 ---
 layout : default
 ---
-
-<h1 id="indexheader">{{page.heading}}</h1>
-<h3>{{ page.date | date: '%B %-d, %Y' }} - by Allan Trinh</h3>
-<article>
-  {{content}}
-</article>
+<div class="content">
+  <h1 id="indexheader">{{page.heading}}</h1>
+  <h3>{{ page.date | date: '%B %-d, %Y' }} - by Allan Trinh</h3>
+  <article>
+    {{content}}
+  </article>
+  <br>
+  <a id="backbutton" href="/blog.html"> << Back</a>
+</div>

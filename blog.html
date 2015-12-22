@@ -3,11 +3,12 @@ layout : default
 title: Blog
 ---
 
-
-<ul id="bloglist">
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.date | date: '%B %-d, %Y' }} : {{ post.heading }}</a>
-    </li>
-  {% endfor %}
+<div class="content">
+  <ul id="bloglist">
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.date | date: '%B %-d, %Y' }} : {{ post.heading }}</a>
+      </li>
+    {% endfor %}
 </ul>
+</div>

@@ -167,11 +167,19 @@ body{
   margin-left: auto;
   margin-right: auto;
 }
-#queens{
+#queens {
   list-style: disc;
   line-height: 1.8;
   font-size: 1.0rem;
   vertical-align: baseline;
   font-family: Helvetica;
   margin-left: 40px;
+}
+#backbutton {
+  line-height: 1.8;
+  display: block;
+  text-decoration: none;
+  font-size: 1.0rem;
+  font-family: Arial;
+  text-align: center;
 }
