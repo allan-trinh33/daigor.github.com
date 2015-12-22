@@ -39,7 +39,7 @@ The N-queens problem is a well known puzzle in the computer science world. The g
 <br>
 <br>  
 <p>
-In binary, base-2 world, 0 is “0”, 1 is “1”, and 10 is “2” because 10 = 1 * 21 + 0 * 20, or 2. To represent a base-10 “43”, this would look like 00101011, or 0 * 27 + 0 * 26 + 1 * 25 + 0 * 24 + 1 * 23 + 0 * 22 + 1 * 21 + 1 * 20. Binary numbers can be mapped and look quite similar to rows on a chessboard. The number 16 in binary is "10000". Quite similar to placing a queen down on the left-most column in a row of a 5x5 chessboard.
+In binary, base-2 world, 0 is “0”, 1 is “1”, and 10 is “2” because 10 = 1 * 21 + 0 * 20, or 2. To represent a base-10 “43”, this would look like 00101011, or 0 * 27 + 0 * 26 + 1 * 25 + 0 * 24 + 1 * 23 + 0 * 22 + 1 * 21 + 1 * 20. Binary numbers can be mapped and look quite similar to rows on a chessboard. The number 16 in binary is "10000". Similar to placing a queen down on the left-most column in a row of a 5x5 chessboard.
 </p>
 <br>
 <br>
@@ -62,9 +62,37 @@ At this point I would suggest drawing a table similar to the one I provided abov
   
   <li>A full column conflict of all x's can only happen when a queen is placed in every column, resulting in a solved board.</li>
 </ul>
+<br>
+<p>
+Next would be the binary operators and their general uses. The bitwise operators used this implementation of N-queens is &, |, ^, ~, and the shift operators >> / <<. Here are a few examples and some tips I picked up regarding these operators.
+</p>
+<br>
+<ul id="queens">
+  <li> OR "|" operator is generally used to combine bits. For example 01101 | 10000 would equate to 11101. This gives us a way to combine all our conflicts to determine which slots are open</li>
+  <li> AND "&" operator can be used to hide or mask certain bits. & of two numbers only returns bits in which both have a 1. For example 01100 & 01000 would equate to 01000. </li>
+  <li>
+    The left << and right >> shift operators shift bits in the left or right direction respectively. In this case it'll be used to shift major/minor diagonal conflicts as we go to the next row.
+  </li>
+  <li>NOT "~" operator inverts inverts the bits of a number. For example ~01100 would equate to 10011. 
+  </li>
+  <li>
+    XOR "^" returns bits where only one has the bit but not the other. An example would be 01011 ^ 11011 would equate to 10000
+  </li>
+  <li>
+    Although it is not a bitwise operator. An important thing to note about negative binary numbers is that they are the inverse of its positive counterpart plus one. For example, 30 is (11110), while -30 is 00001 + 1 or 00010. This follows the two's compliment principle way of encoding negative numbers so that addition of binary numbers still work.
+  </li>
+</ul>
+<br>
+<p>
+ Now for the actual code!
+</p>
+<br>
 
-
-
+<img id="chessboard" src="/assets/solution.png" height="600" width="600">
+<br>
+<p>
+  Upon running this code, I was able calculate 95815104 solutions for N = 17 in under 2 minutes using Google Chrome and a Mac Pro laptop. 
+</p>
 
 </article>
           </div>

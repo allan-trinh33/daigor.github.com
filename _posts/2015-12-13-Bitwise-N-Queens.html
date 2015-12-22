@@ -40,6 +40,7 @@ At this point I would suggest drawing a table similar to the one I provided abov
 <p>
 Next would be the binary operators and their general uses. The bitwise operators used this implementation of N-queens is &, |, ^, ~, and the shift operators >> / <<. Here are a few examples and some tips I picked up regarding these operators.
 </p>
+<br>
 <ul id="queens">
   <li> OR "|" operator is generally used to combine bits. For example 01101 | 10000 would equate to 11101. This gives us a way to combine all our conflicts to determine which slots are open</li>
   <li> AND "&" operator can be used to hide or mask certain bits. & of two numbers only returns bits in which both have a 1. For example 01100 & 01000 would equate to 01000. </li>
@@ -51,7 +52,18 @@ Next would be the binary operators and their general uses. The bitwise operators
   <li>
     XOR "^" returns bits where only one has the bit but not the other. An example would be 01011 ^ 11011 would equate to 10000
   </li>
-
+  <li>
+    Although it is not a bitwise operator. An important thing to note about negative binary numbers is that they are the inverse of its positive counterpart plus one. For example, 30 is (11110), while -30 is 00001 + 1 or 00010. This follows the two's compliment principle way of encoding negative numbers so that addition of binary numbers still work.
+  </li>
 </ul>
+<br>
+<p>
+ Now for the actual code!
+</p>
+<br>
 
-
+<img id="chessboard" src="/assets/solution.png" height="600" width="600">
+<br>
+<p>
+  Upon running this code, I was able calculate 95815104 solutions for N = 17 in under 2 minutes using Google Chrome and a Mac Pro laptop. 
+</p>
