@@ -13,7 +13,7 @@ Express is a widely used web framework for Node.js. It's similar to what jQuery 
 First off, what does app.use even accept as a parameter? Well app.use accepts a function as a parameter. Specifically a function that takes a request, response, and next arguments. Essentially app.use takes in the request / response object when it first hits the server, modifies it in some way, then calls next to cascade it down. The order in which you app.use middleware matters. Below is an example of a middleware function I wrote for one of my projects.
 </p>
 <br>
-<img>
+<img id="chessboard" src="/assets/middleware.png" height="100" width="600">
 <p>
 As you can see, my middleware function first checks to see if a user is in a session. It then searches my database for the user and if found, it modifies the req object so it has a session.user and user property with a value. It also modifies res object to have a locals.user value. After the req and res objects have been modified, it calls next and the modified req/res is sent through to the rest of the servers code. Essentially at any point in any of my routes in the server, I can check if a user is logged in AND who the user is by checking the req.user value.
 </p>
