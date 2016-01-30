@@ -5,16 +5,16 @@ title:
 ---
 
 <p>
-Express is a widely used web framework for Node.js. It's similar to what jQuery does for interacting with the DOM. Due to this, there's always a lot of magic or things going on under the hood that people take for granted. Middleware was one of the things I didn't quite understand and was thrown at me in one of the lessons. I just knew that if I npm installed body parser, require'd it, and app.use'd it at the top of the script, magic would happen and I could access everything I wanted from req.body. As I did more research it became a lot more obvious what these npm packages really were.
+Express is a widely used web framework for Node.js, similar to what jQuery does for interacting with the DOM. Due to this, there's always a lot of magic or things going on under the hood that people take for granted. Middleware was one of the things I didn't quite understand and was thrown at me in one of the lessons. If I npm installed body parser, require'd it, and app.use'd it at the top of the script, magic would happen and I could access everything I wanted from req.body. As I did more research it became a lot more obvious what these npm packages really were.
 </p>
 <br>
 <br>
 <p>
-First off, what does app.use even accept as a parameter? Well app.use accepts a function as a parameter. Specifically a function that takes a request, response, and next arguments. Essentially app.use takes in the request / response object when it first hits the server, modifies it in some way, then calls next to cascade it down. The order in which you app.use middleware matters. Below is an example of a middleware function I wrote for one of my projects.
+What does app.use even accept as a parameter? Well app.use accepts a function as a parameter. Specifically, a function that takes a request, response, and next arguments. Essentially app.use takes in the request / response object when it first hits the server, modifies it in some way, then calls next to cascade it down. The order in which you app.use middleware matters. Below is an example of a middleware function I wrote for one of my projects.
 </p>
 <br>
 <img id="chessboard" src="/assets/middleware.png" height="300" width="700">
 <p>
-As you can see, my middleware function first checks to see if a user is in a session. It then searches my database for the user and if found, it modifies the req object so it has a session.user and user property with a value. It also modifies res object to have a locals.user value. After the req and res objects have been modified, it calls next and the modified req/res is sent through to the rest of the servers code. Essentially at any point in any of my routes in the server, I can check if a user is logged in AND who the user is by checking the req.user value.
+As you can see, my middleware function first checks to see if a user is in a session. Then it searches my database for the user and if found, it modifies the req object so it has a session.user and user property with a value. It also modifies res object to have a locals.user value. After the req and res objects have been modified, it calls next and the modified req/res is sent through to the rest of the servers code. Essentially at any point in any of my routes in the server, I can check if a user is logged in AND who the user is by checking the req.user value. 
 </p>
 
