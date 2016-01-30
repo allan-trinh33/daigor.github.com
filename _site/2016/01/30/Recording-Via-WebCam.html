@@ -21,84 +21,36 @@
           </a>
         </div>
         <div class="demo-blog__posts mdl-grid">
-            <!-- <div class="content">
-  <ul id="bloglist">
-    
-      <li>
-        <a href="/2016/01/30/Recording-Via-WebCam.html">January 30, 2016 : Setting up a Video/Audio Recorder on your webcam</a>
-      </li>
-    
-      <li>
-        <a href="/2016/01/23/FormData.html">January 23, 2016 : Form Data</a>
-      </li>
-    
-      <li>
-        <a href="/2016/01/17/Deploying-quickly.html">January 17, 2016 : Deploying for free</a>
-      </li>
-    
-      <li>
-        <a href="/2016/01/09/Bootstrap.html">January 9, 2016 : CSS Frameworks</a>
-      </li>
-    
-      <li>
-        <a href="/2016/01/05/Express-Middleware.html">January 5, 2016 : Express Middleware</a>
-      </li>
-    
-      <li>
-        <a href="/2015/12/22/Bitwise-N-Queens.html">December 22, 2015 : Bitwise N-queens</a>
-      </li>
-    
-      <li>
-        <a href="/2015/11/14/Hack-Reactor-Twice.html">November 14, 2015 : Hack Reactor Twice?</a>
-      </li>
-    
-  </ul>
-</div> -->
-
-
-<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
   <div class="mdl-card__media mdl-color-text--grey-50">
-    <h3></h3>
+    <h3>Setting up a Video/Audio Recorder on your webcam</h3>
   </div>
   <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
- 
+    <div class="minilogo"></div>
+    <div>
+      <strong>Allan Trinh</strong>
+      <span>January 30, 2016</span>
+    </div>
     <div class="section-spacer"></div>
   </div>
   <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
-     <ul id="bloglist">
-    
-      <li>
-        <a href="/2016/01/30/Recording-Via-WebCam.html">January 30, 2016 : Setting up a Video/Audio Recorder on your webcam</a>
-      </li>
-    
-      <li>
-        <a href="/2016/01/23/FormData.html">January 23, 2016 : Form Data</a>
-      </li>
-    
-      <li>
-        <a href="/2016/01/17/Deploying-quickly.html">January 17, 2016 : Deploying for free</a>
-      </li>
-    
-      <li>
-        <a href="/2016/01/09/Bootstrap.html">January 9, 2016 : CSS Frameworks</a>
-      </li>
-    
-      <li>
-        <a href="/2016/01/05/Express-Middleware.html">January 5, 2016 : Express Middleware</a>
-      </li>
-    
-      <li>
-        <a href="/2015/12/22/Bitwise-N-Queens.html">December 22, 2015 : Bitwise N-queens</a>
-      </li>
-    
-      <li>
-        <a href="/2015/11/14/Hack-Reactor-Twice.html">November 14, 2015 : Hack Reactor Twice?</a>
-      </li>
-    
-  </ul>
+   <p>
+Accessing a users webcam via the browser to produce a streamable source isn't something that works in all browsers without a plugin(Internet explorer). Adding a recorder on top of that and it works in even less browsers. That being said, it was something I wanted to implement for one of my projects to enhance user experience. 
+</p>
+<p>
+Accessing a users camera can be done by the getUserMedia function. This function allows you to do three things. Specify whether you want to get video data from the webcam and/or audio. Asks for permission from the user for access to the hardware. A error function in case the user does not grant permission to use hardware.
+</p>
+<p>
+Once you have access to user hardware, you can hook up a html video tag to the stream produced by the Web Cam. The code to do it is shown below
+//////insert code image//////
+</p>
+<p>
+
+</p>
+
   </div>
   <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
-    <a href="/index.html" class="demo-nav__button">
+    <a href="/blog.html" class="demo-nav__button">
       <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
         <i class="material-icons">arrow_back</i>
       </button>

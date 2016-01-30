@@ -1,60 +1,56 @@
-<!DOCTYPE html> 
-<html>
+<!doctype html>
+
+<html lang="en">
   <head>
-    <title>Dblogs</title>
-    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <link rel="stylesheet" type="css" href="/assets/css/reset.css">
-    <link rel="stylesheet" type="css" href="/assets/css/animate.css">
-    <link rel="stylesheet" type="css" href="/assets/css/style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dblog</title>
+
+   <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/material.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
   <body>
-    
-      <div id="container">
-        <div id="header">
-                    <a class="home"href="/index.html">
-                  Home
-            </a>
-            <ul>
-              <li>
-                <a href="/projects.html">Projects</a>
-              </li>
-              <li>
-                <a href="/blog.html">Blog</a>
-              </li>
-            </ul>
-
+    <div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
+      <main class="mdl-layout__content">
+        <div class="demo-back">
+          <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="/index.html" title="go back" role="button">
+            <i class="material-icons" role="presentation">arrow_back</i>
+          </a>
         </div>
-        <div id="body">
-          <h1>Bitwise N Queens</h1>
-            <div class="content">
-  <h1 id="indexheader">Bitwise N-queens</h1>
-  <h3>December 22, 2015 - by Allan Trinh</h3>
-  <article>
-    <img id="chessboard" src="/assets/queenboard.png" height="400" width="400">
-<br>
-<br>
+        <div class="demo-blog__posts mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__media mdl-color-text--grey-50">
+    <h3>Bitwise N-queens</h3>
+  </div>
+  <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+    <div class="minilogo"></div>
+    <div>
+      <strong>Allan Trinh</strong>
+      <span>December 22, 2015</span>
+    </div>
+    <div class="section-spacer"></div>
+  </div>
+  <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+   <img id="chessboard" src="/assets/queenboard.png" height="400" width="400">
+
 <p>
 The N-queens problem is a well known puzzle in the computer science world. The goal is to find the number of ways you can place N number of queens on a NxN board without killing each other. The problem becomes exponentially tougher as the board size increases. At the current time of this post, I believe the world record algorithm is N = 27. Sadly, this post isn't going to be about the world breaking solution, but a different solution using bitwise operators. To explore this method, it would be best to start with binary numbers.
 </p>
-<br>
-<br>  
+ 
 <p>
 In binary, base-2 world, 0 is “0”, 1 is “1”, and 10 is “2” because 10 = 1 * 21 + 0 * 20, or 2. To represent a base-10 “43”, this would look like 00101011, or 0 * 27 + 0 * 26 + 1 * 25 + 0 * 24 + 1 * 23 + 0 * 22 + 1 * 21 + 1 * 20. Binary numbers can be mapped and look quite similar to rows on a chessboard. The number 16 in binary is "10000". Similar to placing a queen down on the left-most column in a row of a 5x5 chessboard.
 </p>
-<br>
-<br>
+
 <p>
-The first step to solving the N queens problem is mapping out the parameters of the problem. Each time you place down a queen, there are 4 possible conflicts that can happen before placing the next. A row, column, major, and minor diagonal conflict. The row conflict is automatically accounted for due to most algorithms recursively calling the function on the next row. This leaves the column, major, and minor diagonal conflicts.
-</p>
-<br>
-<br>
+The first step to solving the N queens problem is mapping out the parameters of the problem. Each time you place down a queen, there are 4 possible conflicts that can happen before placing the next. A row, column, major, and minor diagonal conflict. The row conflict is automatically accounted for due to most algorithms recursively calling the function on the next row. This leaves the column, major, andminor diagonal conflicts.</p>
 <img id="chessboard" src="/assets/Conflicts.png" height="100" width="600">
-<br>  
-<br>
+
 <p>
-At this point I would suggest drawing a table similar to the one I provided above for a 5x5 board for multiple scenarios. There are a few important things to note: 
+At this point I would suggest drawing a table similar to the one I provided above for a 5x5 board for multiple scenarios. There are a fewimportant things to note: 
 </p>
-<br>
 <ul id="list">
   <li>The conflicts are maps for where you can place queens on the next row. The idea is to combine all three conflicts to determine a safe spot to place a queen on the next row.</li>
   
@@ -62,11 +58,11 @@ At this point I would suggest drawing a table similar to the one I provided abov
   
   <li>A full column conflict of all x's can only happen when a queen is placed in every column, resulting in a solved board.</li>
 </ul>
-<br>
+
 <p>
 Next would be the binary operators and their general uses. The bitwise operators used this implementation of N-queens is &, |, ^, ~, and the shift operators >> / <<. Here are a few examples and some tips I picked up regarding these operators.
 </p>
-<br>
+
 <ul id="list">
   <li> OR "|" operator is generally used to combine bits. For example 01101 | 10000 would equate to 11101. This gives us a way to combine all our conflicts to determine which slots are open</li>
   <li> AND "&" operator can be used to hide or mask certain bits. & of two numbers only returns bits in which both have a 1. For example 01100 & 01000 would equate to 01000. </li>
@@ -82,38 +78,55 @@ Next would be the binary operators and their general uses. The bitwise operators
     Although it is not a bitwise operator. An important thing to note about negative binary numbers is that they are the inverse of its positive counterpart plus one. For example, 30 is (11110), while -30 is 00001 + 1 or 00010. This follows the two's compliment principle way of encoding negative numbers so that addition of binary numbers still work. For more information here's a <a href="https://en.wikipedia.org/wiki/Two%27s_complement">link</a> to the wikipedia page. 
   </li>
 </ul>
-<br>
+
 <p>
  Now for the actual code!
 </p>
-<br>
 
 <img id="chessboard" src="/assets/solution.png" height="600" width="600">
-<br>
 <p>
   Upon running this code, I was able calculate 95815104 solutions for N = 17 in under 2 minutes using Google Chrome and a Mac Pro laptop. 
 </p>
 
-  </article>
-  <br>
-  <a id="backbutton" href="/blog.html"> << Back</a>
-</div>
-        </div> 
-        <div id="footer">
-                <ul id="links">
-        <li>  
-          <a href="https://github.com/Daigor">
-            <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" height="50" width="50">
-          </a>
-        </li>
-        <li>
-          <a href= "https://www.linkedin.com/in/allan-trinh-73238445">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Linkedin_icon.svg/2000px-Linkedin_icon.svg.png" height="50" width="50">
-          </a>
-        </li>
-      </ul>
+  </div>
+  <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
+    <a href="/blog.html" class="demo-nav__button">
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+        <i class="material-icons">arrow_back</i>
+      </button>
+    Back
+    </a>
+    <div class="comment mdl-color-text--grey-700">
+      <div class="comment__answers">
+        <div class="comment">
         </div>
       </div>
-      <!-- <script>$('.content p').addClass('animated fadeIn')</script> -->
+    </div>
+  </div>
+</div>
+
+
+        </div>
+        <footer class="mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            <button class="mdl-mini-footer--social-btn social-btn social-btn__twitter">
+              <span class="visuallyhidden">Twitter</span>
+            </button>
+            <button class="mdl-mini-footer--social-btn social-btn social-btn__blogger">
+              <span class="visuallyhidden">Facebook</span>
+            </button>
+            <button class="mdl-mini-footer--social-btn social-btn social-btn__gplus">
+              <span class="visuallyhidden">Google Plus</span>
+            </button>
+          </div>
+          <div class="mdl-mini-footer--right-section">
+         
+          </div>
+        </footer>
+      </main>
+      <div class="mdl-layout__obfuscator"></div>
+    </div>
+    
   </body>
 </html>
+

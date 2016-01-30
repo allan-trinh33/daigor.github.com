@@ -3,12 +3,46 @@ layout : default
 title: Blog
 ---
 
-<div class="content">
+<!-- <div class="content">
   <ul id="bloglist">
     {% for post in site.posts %}
       <li>
         <a href="{{ post.url }}">{{ post.date | date: '%B %-d, %Y' }} : {{ post.heading }}</a>
       </li>
     {% endfor %}
-</ul>
+  </ul>
+</div> -->
+
+
+<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__media mdl-color-text--grey-50">
+    <h3>{{page.heading}}</h3>
+  </div>
+  <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+ 
+    <div class="section-spacer"></div>
+  </div>
+  <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+     <ul id="bloglist">
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.date | date: '%B %-d, %Y' }} : {{ post.heading }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  </div>
+  <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
+    <a href="/index.html" class="demo-nav__button">
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+        <i class="material-icons">arrow_back</i>
+      </button>
+    Back
+    </a>
+    <div class="comment mdl-color-text--grey-700">
+      <div class="comment__answers">
+        <div class="comment">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

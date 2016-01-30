@@ -1,44 +1,45 @@
-<!DOCTYPE html> 
-<html>
+<!doctype html>
+
+<html lang="en">
   <head>
-    <title>Dblogs</title>
-    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <link rel="stylesheet" type="css" href="/assets/css/reset.css">
-    <link rel="stylesheet" type="css" href="/assets/css/animate.css">
-    <link rel="stylesheet" type="css" href="/assets/css/style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dblog</title>
+
+   <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/material.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
   <body>
-    
-      <div id="container">
-        <div id="header">
-                    <a class="home"href="/index.html">
-                  Home
-            </a>
-            <ul>
-              <li>
-                <a href="/projects.html">Projects</a>
-              </li>
-              <li>
-                <a href="/blog.html">Blog</a>
-              </li>
-            </ul>
-
+    <div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
+      <main class="mdl-layout__content">
+        <div class="demo-back">
+          <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="/index.html" title="go back" role="button">
+            <i class="material-icons" role="presentation">arrow_back</i>
+          </a>
         </div>
-        <div id="body">
-          <h1>Bootstrap</h1>
-            <div class="content">
-  <h1 id="indexheader">CSS Frameworks</h1>
-  <h3>January 9, 2016 - by Allan Trinh</h3>
-  <article>
-    <p>
+        <div class="demo-blog__posts mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__media mdl-color-text--grey-50">
+    <h3>CSS Frameworks</h3>
+  </div>
+  <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+    <div class="minilogo"></div>
+    <div>
+      <strong>Allan Trinh</strong>
+      <span>January 9, 2016</span>
+    </div>
+    <div class="section-spacer"></div>
+  </div>
+  <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+   <p>
 Cascading Style Sheets and I have a quite the relationship. I spend hours scouring google just to make things look the way I want for a specific project, only to forget everything and repeat the same process for the next project. I always leave CSS for last, going with the mentality of implementing functionality over design and hoping things magically look okay without CSS at the end (never happens). However, recently I've been shown some pretty nifty CSS frameworks I'd like to learn.
 </p>
-<br>
-<br>
 <p>
 CSS frameworks like Bootstrap and Foundation bring a whole new field of styling for me. Some people hate them, stating that its somewhat akin to learning another language and more hassel than its worth. Personally, I find them great and quite easy to use. Bootstrap and Foundation have several templates and nifty widgets/gadgets pre-made and ready for copy and pasting. I've always been better at reading through code and changing styles as needed, rather than generating templates from a blank sheet and hoping they all fit well. Here are a few reasons to use CSS frameworks.
 </p>
-<br>
 <ul id="list">
   <li>
     Speed - As said above, Bootstrap provides you with ready made blocks of code for any design related component you need. There are also bootstrap themes available to cut down time on producing any website. 
@@ -50,34 +51,50 @@ CSS frameworks like Bootstrap and Foundation bring a whole new field of styling 
     Support- There is a huge community base behind CSS frameworks. Usually a simple google fix for any problems you run into is all it takes. 
   </li>
 </ul>
-<br>
 <p>
   Overall, if CSS tends to bog you down or you waste countless hours like me googling how to position every single div.I'd take a look at CSS frameworks. Fair warning though, and I learned this the hard way, DON'T try to use more than one CSS framework at a time, it leads to unwanted results.
-</p>
-<br>
-<br>  
+</p>  
 
 
-  </article>
-  <br>
-  <a id="backbutton" href="/blog.html"> << Back</a>
-</div>
-        </div> 
-        <div id="footer">
-                <ul id="links">
-        <li>  
-          <a href="https://github.com/Daigor">
-            <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" height="50" width="50">
-          </a>
-        </li>
-        <li>
-          <a href= "https://www.linkedin.com/in/allan-trinh-73238445">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Linkedin_icon.svg/2000px-Linkedin_icon.svg.png" height="50" width="50">
-          </a>
-        </li>
-      </ul>
+  </div>
+  <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
+    <a href="/blog.html" class="demo-nav__button">
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+        <i class="material-icons">arrow_back</i>
+      </button>
+    Back
+    </a>
+    <div class="comment mdl-color-text--grey-700">
+      <div class="comment__answers">
+        <div class="comment">
         </div>
       </div>
-      <!-- <script>$('.content p').addClass('animated fadeIn')</script> -->
+    </div>
+  </div>
+</div>
+
+
+        </div>
+        <footer class="mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            <button class="mdl-mini-footer--social-btn social-btn social-btn__twitter">
+              <span class="visuallyhidden">Twitter</span>
+            </button>
+            <button class="mdl-mini-footer--social-btn social-btn social-btn__blogger">
+              <span class="visuallyhidden">Facebook</span>
+            </button>
+            <button class="mdl-mini-footer--social-btn social-btn social-btn__gplus">
+              <span class="visuallyhidden">Google Plus</span>
+            </button>
+          </div>
+          <div class="mdl-mini-footer--right-section">
+         
+          </div>
+        </footer>
+      </main>
+      <div class="mdl-layout__obfuscator"></div>
+    </div>
+    
   </body>
 </html>
+

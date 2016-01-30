@@ -1,63 +1,148 @@
-<!DOCTYPE html> 
-<html>
+<!doctype html>
+
+<html lang="en">
   <head>
-    <title>DBlog</title>
-    <link rel="stylesheet" type="css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="css" href="assets/css/animate.css">
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <link rel="stylesheet" type="css" href="assets/css/style.css">
+    <meta charset="utf-8">
+    <title>Dblog</title>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/material.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/png" href="http://realfavicongenerator.net/homepage_icons/technologies/node_2x.png">
   </head>
   <body>
-    
-      <div id="container">
-        <div id="header">
-            <a class="home"href="index.html">
-                  Home
-            </a>
-            <ul>
-              <li>
-                <a href="projects.html">Projects</a>
-              </li>
-              <li>
-                <a href="blog.html">Blog</a>
-              </li>
-            </ul>
-        </div>
-        <div id="body">
-          <div id="circular">
-            <img src="myself.png" height="150" width="110">
+    <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
+      <main class="mdl-layout__content">
+        <div class="demo-blog__posts mdl-grid">
+          <div class="mdl-card coffee-pic mdl-cell mdl-cell--8-col">
+            <div class="mdl-card__media mdl-color-text--grey-50">
+              <h3><a href="blog.html">Blog</a></h3>
+            </div>
+            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+              <div class="minilogo"></div>
+              <div>
+                <strong>Allan Trinh</strong>
+     
+              </div>
+            </div>
           </div>
-          
-          <div class="content">
-          <h1 id="indexheader">Hack Reactor... twice?</h1>
-          <h3>December 12, 2015 - by Allan Trinh</h3>
-          <h5>Welcome!</h5>
-          <p>
+          <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
 
-            I'm currently a student at Hack Reactor Remote program and before that, I attended the Hack Reactor student on-site program. Long story short, I was injured midway through the on-site program and had to drop out. On the bright side, I am able to solidify my understanding of programming concepts much better the second time around. As far as I'm concerned, it's been a blessing in disguise since I get to meet awesome people and see both programs at Hack Reactor. It's amazing how much I've retained and how much more I'm still learning everyday. I feel enabled to try things I was never able to before. 
-          </p>
-          <br>
-          <br>
-          <p>
-            This blog is a perfect example of something I wouldn't have considered setting up my first go around. I've never considered myself a creative writer, nor did I feel the need to jot down what I learned. However, making my own blog from scratch has already become a lesson in itself. I became captivated in the functionality and seemingly smooth transitions of other blogs I came across. Hopefully this blog will become a platform to enhance my learning and development, or at the very least a collection of all the shenanigans in my life.
-          </p>
+            <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
+              <img src="assets/css/images/myself.png">
+            </div>
+            <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
+              <div>
+                <strong>Contact Me</strong>
+              </div>
+           <!--    <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="menubtn">
+                <li class="mdl-menu__item">About</li>
+                <li class="mdl-menu__item">Message</li>
+                <li class="mdl-menu__item">Favorite</li>
+                <li class="mdl-menu__item">Search</li>
+              </ul> -->
+        <!--       <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                <i class="material-icons" role="presentation">more_vert</i>
+                <span class="visuallyhidden">show menu</span>
+              </button> -->
+            </div>
           </div>
-        </div> 
-        <div id="footer">
-          <ul id="links">
-            <li>  
-              <a href="https://github.com/Daigor">
-                <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" height="50" width="50">
-              </a>
-            </li>
-            <li>
-              <a href= "https://www.linkedin.com/in/allan-trinh-73238445">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Linkedin_icon.svg/2000px-Linkedin_icon.svg.png" height="50" width="50">
-             </a>
-            </li>
-          </ul>
+          <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__media mdl-color-text--grey-50">
+              <h3><a href="2016/01/30/Recording-Via-WebCam.html">Webcam Selfie Recording</a></h3>
+            </div>
+            <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
+              Write the code to access your webcam and take embarassing selfies no one knows about... yet.
+            </div>
+            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+              <div class="minilogo"></div>
+              <div>
+                <strong>Allan Trinh</strong>
+                <span>January 30th, 2016</span>
+              </div>
+            </div>
+          </div>
+          <div class="mdl-card amazing mdl-cell mdl-cell--12-col">
+            <a href="2015/11/14/Hack-Reactor-Twice?.html">
+              <div class="mdl-card__title mdl-color-text--grey-50">
+                <h3 class="quote">Hack Reactor... Twice?</h3>
+              </div>
+            </a>
+            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+              The story of a guy who attended Hack Reactor on-site program... only to attend the Remote Beta Program as well
+            </div>
+            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+              <div class="minilogo"></div>
+              <div>
+                <strong>Allan Trinh</strong>
+                <span>November 14th, 2015</span>
+              </div>
+            </div>
+          </div>
+          <div class="mdl-card shopping mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__media mdl-color-text--grey-50">
+              <h3><a href="2015/12/22/Bitwise-N-Queens.html">Bitwise N Queens</a></h3>
+            </div>
+            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+              A Bitwise approach to solving the N queens problem
+            </div>
+            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+              <div class="minilogo"></div>
+              <div>
+                <strong>Allan Trinh</strong>
+                <span>December 22nd, 2015</span>
+              </div>
+            </div>
+          </div>
+          <nav class="demo-nav mdl-cell mdl-cell--12-col">
+            <div class="section-spacer"></div>
+            <a href="blog.html" class="demo-nav__button" title="show more">
+              More
+              <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                <i class="material-icons" role="presentation">arrow_forward</i>
+              </button>
+            </a>
+          </nav>
         </div>
-      </div>
-      <script>$('.content p').addClass('animated fadeIn')</script>
+        <footer class="mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            <a href="https://github.com/Daigor">
+              <button class="mdl-mini-footer--social-btn social-btn social-btn__twitter">
+                <span class="visuallyhidden">Github</span>
+              </button>
+            </a>
+            <a href="https://twitter.com/Daigort3">
+              <button class="mdl-mini-footer--social-btn social-btn social-btn__blogger">  
+                  <span class="visuallyhidden">Twitter</span>
+              </button>
+            </a>
+            <a href= "https://www.linkedin.com/in/allan-trinh-73238445">
+              <button class="mdl-mini-footer--social-btn social-btn social-btn__gplus">
+                <span class="visuallyhidden">Linkedin</span>
+              </button>
+            </a>
+          </div>
+        </footer>
+      </main>
+      <div class="mdl-layout__obfuscator"></div>
+    </div>
+ 
   </body>
+  <script>
+    Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
+      var link = el.querySelector('a');
+      if(!link) {
+        return;
+      }
+      var target = link.getAttribute('href');
+      if(!target) {
+        return;
+      }
+      el.addEventListener('click', function() {
+        location.href = target;
+      });
+    });
+  </script>
 </html>

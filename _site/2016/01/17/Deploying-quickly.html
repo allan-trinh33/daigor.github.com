@@ -1,44 +1,45 @@
-<!DOCTYPE html> 
-<html>
+<!doctype html>
+
+<html lang="en">
   <head>
-    <title>Dblogs</title>
-    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <link rel="stylesheet" type="css" href="/assets/css/reset.css">
-    <link rel="stylesheet" type="css" href="/assets/css/animate.css">
-    <link rel="stylesheet" type="css" href="/assets/css/style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dblog</title>
+
+   <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/material.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
   <body>
-    
-      <div id="container">
-        <div id="header">
-                    <a class="home"href="/index.html">
-                  Home
-            </a>
-            <ul>
-              <li>
-                <a href="/projects.html">Projects</a>
-              </li>
-              <li>
-                <a href="/blog.html">Blog</a>
-              </li>
-            </ul>
-
+    <div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
+      <main class="mdl-layout__content">
+        <div class="demo-back">
+          <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="/index.html" title="go back" role="button">
+            <i class="material-icons" role="presentation">arrow_back</i>
+          </a>
         </div>
-        <div id="body">
-          <h1>Deploying quickly</h1>
-            <div class="content">
-  <h1 id="indexheader">Deploying for free</h1>
-  <h3>January 17, 2016 - by Allan Trinh</h3>
-  <article>
-    <p>
+        <div class="demo-blog__posts mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__media mdl-color-text--grey-50">
+    <h3>Deploying for free</h3>
+  </div>
+  <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+    <div class="minilogo"></div>
+    <div>
+      <strong>Allan Trinh</strong>
+      <span>January 17, 2016</span>
+    </div>
+    <div class="section-spacer"></div>
+  </div>
+  <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+   <p>
 My class has taken quite the liking to making a MEAN stack for their projects. For those who don't know, a MEAN stack is when you use Mongodb, Express, Angular, and Node to create a full stack application. I think its great, I've learned quite a bit about how a front end connects to the back end and a database. All the pieces are finally coming together and I finally feel I can make something. Only problem is, the things I make are hosted locally and no one else can see it. Domains and getting some of the more popular websites to serve your app costs money. The idea of paying somehow turns me off from uploading my project for friends and family to see. Luckily, at least if you are going the MEAN stack route, there are free and quick alternatives to see your website. 
 </p>
-<br>
-<br>
 <p>
 Heroku, a cloud application platform, serves your files for free. It'll host your server made with Express/node to serve your client files. Its awesome, easy to use and even connects to github for continuous deployment if you prefer. However, there are some things you have to ensure to make sure it works.
 </p>
-<br>
 <ul id="list">
   <li>
     Make sure you include an updated package.json with all your node dependencies. Heroku will automatically load your dependencies and also bower dependencies if you include them. Always double check by deleting your dependencies and making sure your application can run just by typing in npm install once and starting the server after.
@@ -50,30 +51,48 @@ Heroku, a cloud application platform, serves your files for free. It'll host you
     When running locally, you assign the port you want your server to run on. However, when running on heroku, you're running on a different environment and they assign it. An easy catch all is just to assign your server to listen on process.env.port || (whatever port you want locally). 
   </li>
 </ul>
-<br>
 <p>
 Herokus great, but it only hosts your server and not the database behind it. A free and easy to use mongodb database provider is modulus.io. Upon log in, its as simple as pressing create a database and a username/password for that database. They then provide you a URL to connect to the database from your server. However, when making a user, be sure to uncheck the "Read Only" box and allow your user to write to the database. That should be all you need to deploy your application for the world to see!
 </p>
-  </article>
-  <br>
-  <a id="backbutton" href="/blog.html"> << Back</a>
-</div>
-        </div> 
-        <div id="footer">
-                <ul id="links">
-        <li>  
-          <a href="https://github.com/Daigor">
-            <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" height="50" width="50">
-          </a>
-        </li>
-        <li>
-          <a href= "https://www.linkedin.com/in/allan-trinh-73238445">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Linkedin_icon.svg/2000px-Linkedin_icon.svg.png" height="50" width="50">
-          </a>
-        </li>
-      </ul>
+  </div>
+  <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
+    <a href="/blog.html" class="demo-nav__button">
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+        <i class="material-icons">arrow_back</i>
+      </button>
+    Back
+    </a>
+    <div class="comment mdl-color-text--grey-700">
+      <div class="comment__answers">
+        <div class="comment">
         </div>
       </div>
-      <!-- <script>$('.content p').addClass('animated fadeIn')</script> -->
+    </div>
+  </div>
+</div>
+
+
+        </div>
+        <footer class="mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            <button class="mdl-mini-footer--social-btn social-btn social-btn__twitter">
+              <span class="visuallyhidden">Twitter</span>
+            </button>
+            <button class="mdl-mini-footer--social-btn social-btn social-btn__blogger">
+              <span class="visuallyhidden">Facebook</span>
+            </button>
+            <button class="mdl-mini-footer--social-btn social-btn social-btn__gplus">
+              <span class="visuallyhidden">Google Plus</span>
+            </button>
+          </div>
+          <div class="mdl-mini-footer--right-section">
+         
+          </div>
+        </footer>
+      </main>
+      <div class="mdl-layout__obfuscator"></div>
+    </div>
+    
   </body>
 </html>
+
