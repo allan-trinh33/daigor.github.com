@@ -241,12 +241,9 @@ body .demo-blog {
   font-weight: 500;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
+  background-image: url('images/myself.png');
 }
-.demo-blog .something-else .mdl-card__media img {
-  max-height:100%;
-  max-width: 100%;
-  margin-bottom: 10px;
-}
+
 .demo-blog .something-else .mdl-card__supporting-text {
   background-color: #F5F5F5;
   border-bottom-left-radius: 2px;
