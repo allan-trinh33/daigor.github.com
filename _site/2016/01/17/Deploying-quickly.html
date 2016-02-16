@@ -23,7 +23,7 @@
         <div class="demo-blog__posts mdl-grid">
             <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
   <div class="mdl-card__media mdl-color-text--grey-50">
-    <h3>Deploying for free</h3>
+    <h3>Deploying a full stack application</h3>
   </div>
   <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
     <div class="minilogo"></div>
@@ -35,24 +35,43 @@
   </div>
   <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
    <p>
-My class has taken quite the liking to making a MEAN stack for their projects. For those who don't know, a MEAN stack is when you use Mongodb, Express, Angular, and Node to create a full stack application. I think its great, I've learned quite a bit about how a front end connects to the back end and a database. All the pieces are finally coming together and I finally feel I can make something. Only problem is, the things I make are hosted locally and no one else can see it. Domains and getting some of the more popular websites to serve your app costs money. The idea of paying somehow turns me off from uploading my project for friends and family to see. Luckily, at least if you are going the MEAN stack route, there are free and quick alternatives to see your website. 
-</p>
-<p>
-Heroku, a cloud application platform, serves your files for free. It'll host your server made with Express/node to serve your client files. Its awesome, easy to use and even connects to github for continuous deployment if you prefer. However, there are some things you have to ensure to make sure it works.
+Heroku is a cloud application platform which serves your files for free. It's awesome, easy to use, and allows continuous deployment if you prefer. This post will be about how to start and debug deploying a full stack application. To start, create an account at Heroku and create a new app. Click on the Deploy tab and it will allow several methods of deployment. Heroku git allows you to deploy from the command line, while Github and Dropbox allow you to deploy from the respective applications. For the purposes of this post, I chose continuous deployment from a Github branch. A few things to include in your full stack application...
 </p>
 <ul id="list">
   <li>
-    Make sure you include an updated package.json with all your node dependencies. Heroku will automatically load your dependencies and also bower dependencies if you include them. Always double check by deleting your dependencies and making sure your application can run just by typing in npm install once and starting the server after.
+    Include an updated package.json with all your node dependencies. Heroku will automatically load your dependencies and also bower dependencies if you include them. Always double check by deleting your dependencies and making sure your application can run just by typing in npm install once and starting the server after.
   </li>
   <li>
     Procfile is the list of commands you want ran on heroku when the files get loaded up. At the very least you want heroku to fire up your server by including web: node server.js (or wherever your server file is located)
   </li>
   <li>
-    When running locally, you assign the port you want your server to run on. However, when running on heroku, you're running on a different environment and they assign it. An easy catch all is just to assign your server to listen on process.env.port || (whatever port you want locally). 
+    When running locally, you assign the port you want your server to run on. However, when running on heroku, you're running on a different environment and they assign it. An easy catch all is just to assign your server to listen on process.env.port || (whatever port you want locally). There are also process environment variables you can set in order to avoid having API keys or any other information pushed up shown <a href='https://devcenter.heroku.com/articles/config-vars'>here</a>. 
   </li>
 </ul>
 <p>
-Herokus great, but it only hosts your server and not the database behind it. A free and easy to use mongodb database provider is modulus.io. Upon log in, its as simple as pressing create a database and a username/password for that database. They then provide you a URL to connect to the database from your server. However, when making a user, be sure to uncheck the "Read Only" box and allow your user to write to the database. That should be all you need to deploy your application for the world to see!
+Here's a photo of a common way to template a full scale app
+</p>
+<div>
+
+  <img id="" src="/assets/heroku.png" height="300" width="300">
+</div>
+<p>
+Heroku hosts your server and but does not come with a default database. They do include an add-on Mongodb database hosted by MongoLabs if you are in need. A link to how to set it up can be found <a href='https://devcenter.heroku.com/articles/mongolab'>here</a> 
+</p>
+<p>
+Debugging a deployed version of your application is a bit more complicated with heroku. There are specific heroku command line prompts you can run to help you through the process. The first step to using the command line is to visit the Deploy tab in the application page and clicking Heroku Git. In your command line type 
+</p>
+
+<h5>heroku git:clone -a (ApplicationName)</h5>
+
+
+<p>
+After entering your application directory cloned down from heroku, There are several commands available to you from heroku. A command that I use a lot is</p> 
+<h5>heroku logs --tail</h5> 
+
+<p>which allow you to see all the console logs of your application real time as its running or being accessed. Another extremely useful one is </p>
+<h5>heroku run bash</h5>
+<p> which allows you to enter the directory of the deployed version and use commands like cd or ls to see if you are missing any dependencies or files. Generally between the logs and directory searching of a deployed version, I'm capable of debugging most full stack applications. However, if you're still having trouble, a full list of CLI commands can be found a full list of the documentation is found <a href='https://devcenter.heroku.com/categories/command-line'>here</a>.
 </p>
   </div>
   <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
