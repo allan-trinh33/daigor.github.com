@@ -1,6 +1,6 @@
 ---
 layout : post
-heading : Form Data
+heading : Using Postman with Streamable API 
 title:  
 ---
 
@@ -9,10 +9,20 @@ title:
 API's are something all programmers have to deal with. When an API is well documented with examples and/or easy to use, you get a vast resource of information by simply typing in one line of code. Other times, it can lead to frustration when you don't know why its rejecting your request. One of the things I've learned recently when trying to make a request to a server is the FormData object.
 </p>
 <p>
-My story starts by reading through documentation of a particular API, which seemed simple and easy to use. I submit a post request to a url with video file as an argument. My initial instinct is to just make a request and pass an object with a file key along with the file as the value. I submit it and consistently get a 400 BAD Request with data saying I'm not sending the correct data. I go through the usual debuggers question and console log my file, make sure all my async functions are in order, and google for any reasons as to why it would not work. The error didn't come from not sending the value of my file, but the object that was wrapping it.
-</p>
-<p>
-FormData objects are a specific type of object that allows you to compile key/value pairs to send during an XMLHttpRequest. It's primary use is to send in form data, mainly Files and Blobs (yeah blobs).
+Streamable API allows anyone to upload a video with a POST request and will host your video on their network for free. An example of their API is shown here.</p>
+
+<img src="/assets/streamable.png" height="200" width="600">
+<p> Generally, the first few steps is to test the url with test data to ensure everything comes back correctly. A quick way to test API's is to use <a href='https://www.getpostman.com/'>Postman</a>. I've shown a screenshot below of me sending an example POST request to Streamable API.
 </p>
 
+<img src="/assets/postman.png" height="200" width="600">
+<p>
+And here is the response from Streamable
+</p>
+<br>
+<img src="/assets/postman2.png" height="200" width="600">
+<p>
+As you can see, according to Streamable API, it was a successful response and I was able to recieve a shortcode to poll for the correct video URL later. So how does this translate to code? Well as you can see, we submitted form-data with a key 'file' and the value being a file we choose. <a href='https://developer.mozilla.org/en-US/docs/Web/API/FormData'>FormData</a> is a very specific type of object in which you can append key value pairs. A sample snippet of the request using the Axios, a promise based http client for browser/node is shown below.
+</p>
+<img src="/assets/axios.png" height="175" width="600">
 
