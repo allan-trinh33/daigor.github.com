@@ -23,7 +23,7 @@
         <div class="demo-blog__posts mdl-grid">
             <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
   <div class="mdl-card__media mdl-color-text--grey-50">
-    <h3>Setting up a Video/Audio Recorder on your webcam</h3>
+    <h3>Setting up a selfie stream using React</h3>
   </div>
   <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
     <div class="minilogo"></div>
@@ -35,19 +35,23 @@
   </div>
   <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
    <p>
-Accessing a users webcam via the browser to produce a streamable source isn't something that works in all browsers without a plugin(Internet explorer). Adding a recorder on top of that and it works in even less browsers. That being said, it was something I wanted to implement for one of my projects to enhance user experience. 
+Accessing a users webcam via the browser to produce a streamable source isn't something that works in all browsers without a plugin (Internet explorer). That being said, it was something I wanted to implement for one of my projects to enhance user experience. 
 </p>
 <p>
-Accessing a users camera can be done by the getUserMedia function. This function allows you to do three things. Specify whether you want to get video data from the webcam and/or audio. Asks for permission from the user for access to the hardware. A error function in case the user does not grant permission to use hardware.
+Accessing a users camera can be done by the <a href='https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getUserMedia'>getUserMedia</a> function provided by WebRTC. This function allows you to do three things, specify if you want to get video or audio data from the webcam, asks for permission from the user for access to the hardware, and a error function in case the user does not grant permission to use hardware.
 </p>
 <p>
 Once you have access to user hardware, you can hook up a html video tag to the stream produced by the Web Cam. The code to do it is shown below
-//////insert code image//////
+</p>
+<img id="chessboard" src="/assets/vid.png" height="100" width="700">
+<br>
+<img id="chessboard" src="/assets/vid2.png" height="150" width="700">
+<p>
+As you can see, the video tag is given a reference of video and accessed in the componentDidMount lifecycle. Once the component mounts, you specify the getUserMedia function and pass it an object with keys to what you want to access, video and/or audio. The callback function gives you access to the data stream created by the camera ( assuming users give access ) and the video source is then set to a url created by using the <a href='https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL'>createObjectURL</a> and passing it the stream. 
 </p>
 <p>
-
+Setting the state of the stream allows you to access the stream is for future access to it. In one of my next posts I will talk about how to set up a recorder with this stream.
 </p>
-
   </div>
   <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
     <a href="/blog.html" class="demo-nav__button">
